@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Table, Image, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { Offline, Online } from "react-detect-offline";
+import { Offline } from "react-detect-offline";
 
 const Users = () => {
   const [users, setUsers] = useState([]);

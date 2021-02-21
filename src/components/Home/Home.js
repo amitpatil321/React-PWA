@@ -1,9 +1,13 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-
+import { Container, Alert } from "react-bootstrap";
+import { Offline } from "react-detect-offline";
 export default function Home() {
   return (
     <Container>
+      <Offline>
+        <Alert variant={"danger"}>You are in offline mode!</Alert>
+      </Offline>
+
       <div id="Translation">
         <h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
         <p>

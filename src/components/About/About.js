@@ -1,9 +1,13 @@
 import React from "react";
-import { Container, Image } from "react-bootstrap";
+import { Container, Image, Alert } from "react-bootstrap";
+import { Offline } from "react-detect-offline";
 
 export default function About() {
   return (
     <Container>
+      <Offline>
+        <Alert variant={"danger"}>You are in offline mode!</Alert>
+      </Offline>
       <Image
         fluid
         alt="PWA community logo"
