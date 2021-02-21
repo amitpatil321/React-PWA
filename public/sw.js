@@ -23,11 +23,16 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("fetch", (event) => {
   // Load data from cache only if there is no internet connection
-  //   console.log(navigator);
+  event.waitUntil(
+    this.registration.showNotification("Test notification", {
+      body: "hellow from notification",
+    })
+  );
+
   if (!navigator.onLine) {
     event.respondWith(
       caches.match(event.request).then((response) => {
-        // If its availabel in cache then load from cache
+        // If its  availabel in cache then load from cache
         if (response) {
           return response;
         }

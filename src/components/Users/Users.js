@@ -27,7 +27,7 @@ const Users = () => {
       <Offline>
         <Alert variant={"danger"}>You are in offline mode!</Alert>
       </Offline>
-      <Table striped bordered hover style={{ background: "#fff" }}>
+      <Table striped bordered hover responsive style={{ background: "#fff" }}>
         <thead>
           <tr>
             <th>#</th>
